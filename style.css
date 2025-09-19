@@ -33,6 +33,11 @@ section {
     margin: 0 auto;
 }
 
+/* Add padding-top to create space for the fixed header */
+#projects, #contact-page {
+    padding-top: 8rem;
+}
+
 h1, h2, h3, h4 {
     line-height: 1.2;
     margin-bottom: 1rem;
@@ -241,6 +246,89 @@ nav {
     color: var(--light-text-color);
 }
 
+
+/* --- Projects Section --- */
+.project-showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 7rem;
+}
+.project-showcase:last-child {
+    margin-bottom: 0;
+}
+.project-showcase.alt-layout .project-image {
+    order: 2;
+}
+.project-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    transition: transform 0.3s;
+}
+.project-image img:hover {
+    transform: scale(1.05);
+}
+.project-details h3 {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+.project-details h4 {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    color: var(--text-color);
+}
+.project-details .project-description {
+    font-size: 1.1rem;
+    color: var(--light-text-color);
+    margin-bottom: 1.5rem;
+}
+.project-details ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.project-details ul li {
+    color: var(--light-text-color);
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 25px;
+}
+.project-details ul li::before {
+    content: '\f058'; /* Font Awesome check icon */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+}
+.tags {
+    margin-top: 1.5rem;
+}
+.tags span {
+    background-color: var(--light-bg);
+    color: var(--light-text-color);
+    padding: 0.4rem 0.9rem;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    margin-right: 0.5rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    border: 1px solid var(--border-color);
+}
+
+/* --- Portfolio Link Section on Main Page --- */
+#portfolio-link {
+    text-align: center;
+    background-color: var(--light-bg);
+}
+#portfolio-link p {
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+    color: var(--light-text-color);
+    font-size: 1.1rem;
+}
+
 /* --- Experience Timeline --- */
 .timeline {
     position: relative;
@@ -294,18 +382,6 @@ nav {
 .timeline-content .date { font-style: italic; color: var(--light-text-color); margin-bottom: 1rem; }
 .timeline-content ul { list-style-position: inside; text-align: left; }
 
-/* --- Portfolio Link Section --- */
-#portfolio-link {
-    text-align: center;
-    background-color: var(--light-bg);
-}
-#portfolio-link p {
-    max-width: 600px;
-    margin: 0 auto 2.5rem;
-    color: var(--light-text-color);
-    font-size: 1.1rem;
-}
-
 /* --- Education Section --- */
 .education-grid {
     display: grid;
@@ -322,15 +398,50 @@ nav {
 .education-card h4 { font-size: 1.2rem; color: var(--text-color); }
 .education-card p { color: var(--light-text-color); }
 
-/* --- Contact Section --- */
+/* --- Contact Section & Page --- */
 #contact {
     text-align: center;
 }
-#contact p {
+#contact p, #contact-page p {
     max-width: 600px;
     margin: 0 auto 2.5rem;
     color: var(--light-text-color);
     font-size: 1.1rem;
+}
+
+.contact-form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: var(--light-bg);
+    padding: 2.5rem;
+    border-radius: 10px;
+    text-align: left;
+}
+.form-group {
+    margin-bottom: 1.5rem;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
 }
 
 /* --- Footer --- */
@@ -381,6 +492,18 @@ footer p { color: var(--light-text-color); font-size: 0.9rem; }
 }
 
 /* --- Responsive Design --- */
+@media (max-width: 992px) {
+    .project-showcase, .project-showcase.alt-layout {
+        grid-template-columns: 1fr;
+    }
+    .project-showcase.alt-layout .project-image {
+        order: 1;
+    }
+    .project-showcase .project-details {
+        order: 2;
+    }
+}
+
 @media (max-width: 768px) {
     h1 { font-size: 2.8rem; }
     h2 { font-size: 2.2rem; }
