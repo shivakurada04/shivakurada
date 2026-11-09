@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>K Sri Dattha Shiva Kumar | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=17">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.20/dist/lenis.css">
 </head>
 <body>
 
@@ -19,7 +20,7 @@
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <button class="hamburger" id="hamburger">
+            <button class="hamburger" id="hamburger" aria-label="Open menu">
                 <span class="hamburger-bar"></span>
                 <span class="hamburger-bar"></span>
                 <span class="hamburger-bar"></span>
@@ -30,152 +31,280 @@
     <main>
         <section id="hero">
             <div class="hero-content">
-                <h1>K Sri Dattha Shiva Kumar</h1>
-                <p class="subtitle">Full Stack Developer & Machine Learning Enthusiast</p>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/k-sri-dattha-shiva-kumar-290829276/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/shivakurada04" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="mailto:shivakurada@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <div class="hero-copy">
+                    <p class="hero-kicker">Full-Stack Software Engineer · Mr Chams</p>
+                    <h1>K Sri Dattha Shiva Kumar</h1>
+                    <p class="subtitle">Full-Stack Developer | Backend Developer | Node.js Developer</p>
+                    <p class="hero-lead">I build the Node.js and Express APIs behind Zaanvar: the customer app, vendor portal, support dashboard, and mobile clients. The platform serves 5,000+ accounts, with Redis caching, Razorpay payments, and releases on AWS.</p>
+                    <p class="hero-meta">Hyderabad, Telangana, India</p>
+                    <div class="metric-row hero-metrics">
+                        <span>5,000+ accounts</span>
+                        <span>35% faster queries</span>
+                        <span>120 ms lower API latency</span>
+                    </div>
+                    <div class="button-container">
+                        <a href="projects.html" class="cta-button">View Projects</a>
+                        <a href="K_SRI_DATTHA_SHIVA_KUMAR.pdf" download class="cta-button secondary">Download Resume</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/k-sri-dattha-shiva-kumar-290829276/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/shivakurada04" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="mailto:shivakurada@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="tel:+919121384525" aria-label="Phone"><i class="fas fa-phone"></i></a>
+                    </div>
                 </div>
-                <div class="button-container">
-                    <a href="K_SRI_DATTHA_SHIVA_KUMAR.pdf" target="_blank" class="cta-button">View Resume</a>
-                    <a href="K_SRI_DATTHA_SHIVA_KUMAR.pdf" download class="cta-button">Download Resume</a>
+                <div class="hero-photo">
+                    <img src="shiva.jpeg" alt="K Sri Dattha Shiva Kumar">
                 </div>
             </div>
         </section>
 
-        <section id="about" class="fade-in">
+        <section id="about">
             <h2>About Me</h2>
-            <div class="about-container">
-                <div class="about-photo">
-                    <img src="shiva.jpeg" alt="K Sri Dattha Shiva Kumar">
-                </div>
-                <div class="about-text">
-                    <p>As a newly graduated professional with hands-on experience in software development projects, I bring a focused and results-driven mindset along with proficiency in multiple programming languages. A quick learner and adaptable team player, I am motivated to contribute to organizational success while continuously developing my technical expertise. I am seeking an opportunity to enhance software solutions and grow in a dynamic, collaborative environment within the tech industry.</p>
-                </div>
+            <div class="about-profile">
+                <p class="reveal">I am a full-stack and backend developer at Mr Chams in Hyderabad. I build the Node.js and Express services and the Next.js screens for Zaanvar: pet adoption, sales, lost and found, vendor billing, and support. Those services run the customer app, vendor portal, support dashboard, and mobile clients for 5,000+ accounts.</p>
+                <p class="reveal">Pet records sit in MongoDB with Mongoose. Vendor stock, purchase orders, sales, wallets, suppliers, and branches sit in MySQL with Sequelize. Redis caching cut query time by 35% and API latency by 120 ms. Accounts use AWS Cognito and JWT, payments go through Razorpay, and live updates go through Socket.io.</p>
+                <p class="reveal">Before this role I built a Django payments system for 2,000+ users and cut transaction discrepancies by 25%. I also built a PHP learning portal for 500+ students and cut manual coordination by 40%, plus machine learning projects for crime prediction, privilege-escalation detection, and face recognition.</p>
             </div>
         </section>
 
         <section id="experience" class="fade-in">
             <h2>Professional Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Python Full Stack Intern</h3>
-                        <p class="company">Parmy Technologies Pvt ltd | Hyderabad, India</p>
-                        <p class="date">Dec 2024 - Jun 2025</p>
-                        <ul>
-                            <li>Developed backend APIs using Python (Flask/Django) to serve ML model predictions.</li>
-                            <li>Designed and implemented role-based access control and secure login features.</li>
-                            <li>Built responsive dashboards using HTML, CSS, JavaScript to visualize alerts.</li>
-                            <li>Managed data storage and retrieval using MySQL, optimizing queries for performance.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Internship</h3>
-                        <p class="company">Electronics Corporation of India Limited (ECIL) | Hyderabad, India</p>
-                        <p class="date">Dec 2019 - Jun 2020</p>
-                        <ul>
-                            <li>Used MATLAB and Simulink to design and simulate complex electrical circuits.</li>
-                            <li>Learned theoretical and practical skills by attending classes and workshops.</li>
-                            <li>Shadowed senior staff to learn a wide range of simple and complex techniques.</li>
-                        </ul>
-                    </div>
-                </div>
+            <p class="section-intro">Production full-stack work on the Zaanvar customer app, vendor portal, support dashboard, and mobile clients.</p>
+            <div class="experience-list">
+                <article class="experience-card">
+                    <h3>Full-Stack Software Engineer</h3>
+                    <p class="company">Mr Chams Pvt. Ltd. | Hyderabad, India</p>
+                    <p class="date">Jan 2026 – Present</p>
+                    <p class="role-summary">I build the REST APIs, data models, and Next.js features for Zaanvar, from pet adoption and vendor billing through support operations and mobile clients.</p>
+                    <ul>
+                        <li>Develop Node.js and Express REST APIs for the Zaanvar customer app, vendor portal, support dashboard, and mobile clients.</li>
+                        <li>Model vendor stock, purchase orders, sales, wallets, suppliers, and branches in MySQL with Sequelize, and pet records in MongoDB with Mongoose.</li>
+                        <li>Tune MySQL queries and Redis caching, cutting query processing time by 35% and API latency by 120 ms on production routes.</li>
+                        <li>Secure 5,000+ user accounts with AWS Cognito, JSON Web Tokens (JWT), and role-based access for customers and support staff.</li>
+                        <li>Store pet media in Amazon S3 and purge cached files through the Bunny CDN API.</li>
+                        <li>Deploy Node.js services with Docker, PM2, and GitHub Actions, and publish Swagger docs for Postman testing.</li>
+                        <li>Build Next.js features for pet adoption, pet sales, lost and found, vendor billing, and support operations.</li>
+                        <li>Integrate Razorpay order creation for customer payments and Socket.io for live chat and location updates.</li>
+                        <li>Connect OpenAI content tools and Firebase Cloud Messaging for pet profiles and customer activity.</li>
+                        <li>Add Helmet headers, rate limiting, and bcrypt password hashing on authentication and public API routes.</li>
+                        <li>Serve adoption, sales, clinic, and grooming data to the Next.js site and companion mobile clients.</li>
+                        <li>Test pet, vendor, and support endpoints in Postman during Agile releases before staging and production.</li>
+                    </ul>
+                </article>
             </div>
         </section>
 
         <section id="skills" class="fade-in">
             <h2>Technical Skills</h2>
             <div class="skills-grid">
-                 <div class="skill-card">
+                <div class="skill-card">
                     <i class="fas fa-code"></i>
                     <h3>Languages</h3>
-                    <p>Python, Java, JavaScript, PHP, SQL</p>
+                    <ul class="skill-list">
+                        <li>JavaScript (ES6+)</li>
+                        <li>SQL</li>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>PHP</li>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                    </ul>
                 </div>
                 <div class="skill-card">
-                    <i class="fas fa-cogs"></i>
-                    <h3>Frameworks & Libraries</h3>
-                    <p>Flask, Django, Scikit-learn, Pandas, OpenCV</p>
+                    <i class="fab fa-react"></i>
+                    <h3>Frontend</h3>
+                    <ul class="skill-list">
+                        <li>React.js</li>
+                        <li>Next.js</li>
+                        <li>Zustand</li>
+                        <li>Material UI</li>
+                        <li>Responsive web design</li>
+                    </ul>
                 </div>
                 <div class="skill-card">
-                    <i class="fas fa-layer-group"></i>
-                    <h3>Front-End</h3>
-                    <p>HTML, CSS, Responsive Design</p>
+                    <i class="fas fa-server"></i>
+                    <h3>Backend</h3>
+                    <ul class="skill-list">
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>Django</li>
+                        <li>REST APIs</li>
+                        <li>Socket.io</li>
+                        <li>Swagger/OpenAPI</li>
+                    </ul>
                 </div>
                 <div class="skill-card">
                     <i class="fas fa-database"></i>
                     <h3>Databases</h3>
-                    <p>MySQL, SQLite</p>
+                    <ul class="skill-list">
+                        <li>MySQL</li>
+                        <li>MongoDB</li>
+                        <li>Redis</li>
+                        <li>Sequelize</li>
+                        <li>Mongoose</li>
+                        <li>Schema design</li>
+                        <li>Query optimization</li>
+                    </ul>
                 </div>
                 <div class="skill-card">
                     <i class="fas fa-cloud"></i>
-                    <h3>Cloud & Security</h3>
-                    <p>Cloud Security Concepts, AWS (familiarity)</p>
+                    <h3>Cloud &amp; DevOps</h3>
+                    <ul class="skill-list">
+                        <li>AWS Cognito</li>
+                        <li>S3</li>
+                        <li>CloudFront</li>
+                        <li>SES</li>
+                        <li>Docker</li>
+                        <li>CI/CD</li>
+                        <li>GitHub Actions</li>
+                        <li>PM2</li>
+                        <li>Linux</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-shield-halved"></i>
+                    <h3>Security</h3>
+                    <ul class="skill-list">
+                        <li>JWT</li>
+                        <li>RBAC</li>
+                        <li>bcrypt</li>
+                        <li>Helmet</li>
+                        <li>Rate limiting</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-plug"></i>
+                    <h3>Integrations</h3>
+                    <ul class="skill-list">
+                        <li>Razorpay</li>
+                        <li>Firebase Cloud Messaging</li>
+                        <li>OpenAI API</li>
+                        <li>Nodemailer</li>
+                        <li>Postman</li>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                    </ul>
                 </div>
                 <div class="skill-card">
                     <i class="fas fa-toolbox"></i>
-                    <h3>Tools & Platforms</h3>
-                    <p>Git, GitHub, VS Code, MATLAB, Simulink</p>
+                    <h3>Practices</h3>
+                    <ul class="skill-list">
+                        <li>API development</li>
+                        <li>Database design</li>
+                        <li>Authentication</li>
+                        <li>Debugging</li>
+                        <li>Deployment</li>
+                        <li>Agile</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
         <section id="portfolio-link" class="fade-in">
-            <h2>My Portfolio</h2>
-            <p>Here are a few projects I’ve worked on. Click below to view them all.</p>
-            <a href="projects.html" class="cta-button">View All Projects</a>
+            <h2>Projects</h2>
+            <p>Each project below is the product, the problem, and what I built. The full write-ups, images, and links are on the projects page.</p>
+            <div class="education-grid">
+                <div class="education-card">
+                    <h4>Zaanvar — Consumer Pet Platform</h4>
+                    <p>Adoption, sales, lost and found, and pet services needed one account system and one API. I built the REST APIs, Redis caching, Razorpay checkout, and S3 media handling for 5,000+ accounts.</p>
+                </div>
+                <div class="education-card">
+                    <h4>Zaanvar Vendor Portal</h4>
+                    <p>Branches tracked stock, purchase orders, and bills separately. I built the MySQL billing portal for wallets, pay-later accounts, GST, and QR inventory intake.</p>
+                </div>
+                <div class="education-card">
+                    <h4>Zaanvar Support Dashboard</h4>
+                    <p>Content, vendor onboarding, and tickets were spread across the team. I built the admin API and role-based access for support, operations, and distributors.</p>
+                </div>
+            </div>
+            <div class="view-all-wrap">
+                <a href="projects.html" class="cta-button">View All Projects</a>
+            </div>
         </section>
 
         <section id="education" class="fade-in">
             <h2>Education</h2>
-            <div class="education-grid">
-                 <div class="education-card">
-                    <h4>M.S. Data Science</h4>
-                    <p>Chandigarh University (2023 - 2025)</p>
-                </div>
+            <div class="education-grid" id="education-grid">
                 <div class="education-card">
                     <h4>M.Sc. Computer Science</h4>
-                    <p>Aurora PG College (2023 - 2025)</p>
+                    <p>Aurora's Degree &amp; PG College</p>
+                    <p>2023 – 2025 · CGPA 7.00 / 10.00</p>
                 </div>
                 <div class="education-card">
-                    <h4>Postgraduate Diploma in Programming Languages</h4>
-                    <p>Osmania University (2023 - 2024)</p>
+                    <h4>B.Sc. Computer Science</h4>
+                    <p>Sri Sai Degree &amp; PG College</p>
+                    <p>2020 – 2023 · CGPA 8.40 / 10.00</p>
                 </div>
                 <div class="education-card">
-                    <h4>B.Sc. Electronics & Comp Science.</h4>
-                    <p>Sri Sai Degree & PG College (2020 - 2023)</p>
-                </div>
-                 <div class="education-card">
                     <h4>Diploma in Engineering</h4>
-                    <p>Brilliant Institute of Engineering & Tech (2017 - 2020)</p>
+                    <p>Brilliant Engineering College</p>
+                    <p>2017 – 2020 · Score 74.80%</p>
                 </div>
+                <div class="education-card is-extra">
+                    <h4>Master's, Data Science &amp; Artificial Intelligence</h4>
+                    <p>Chandigarh University</p>
+                    <p>July 2023 – August 2025</p>
+                </div>
+            </div>
+            <div class="view-all-wrap">
+                <button type="button" class="cta-button view-all-button" data-view-all="education-grid" aria-expanded="false">View all</button>
+            </div>
+        </section>
+
+        <section id="certifications" class="fade-in">
+            <h2>Certifications</h2>
+            <div class="education-grid" id="certifications-grid">
+                <div class="education-card">
+                    <h4>Cisco Advanced SQL Certification</h4>
+                    <p>Indexing, multi-table joins, and query tuning</p>
+                </div>
+                <div class="education-card">
+                    <h4>Python Programming Certification</h4>
+                    <p>Object-oriented programming, data structures, and automation</p>
+                </div>
+                <div class="education-card">
+                    <h4>Generative AI Mastermind Program</h4>
+                    <p>Outskill · LLM API integration and prompt design</p>
+                </div>
+                <div class="education-card is-extra">
+                    <h4>ChatGPT for Python</h4>
+                    <p>Using ChatGPT for Python development</p>
+                </div>
+                <div class="education-card is-extra">
+                    <h4>Certified Ethical Hacker (CEH)</h4>
+                    <p>Ethical hacking certification</p>
+                </div>
+                <div class="education-card is-extra">
+                    <h4>Data Structures and Algorithms</h4>
+                    <p>Data structures and algorithms</p>
+                </div>
+            </div>
+            <div class="view-all-wrap">
+                <button type="button" class="cta-button view-all-button" data-view-all="certifications-grid" aria-expanded="false">View all</button>
             </div>
         </section>
 
         <section id="contact" class="fade-in">
             <h2>Get In Touch</h2>
-            <p>I’m always open to exploring new projects, innovative ideas, and meaningful opportunities to bring your vision to life.</p>
+            <p>I’m in Hyderabad and open to backend, full-stack, and Node.js roles. Email shivakurada@gmail.com, call +91 9121384525, or message me on LinkedIn.</p>
             <a href="contact.html" class="cta-button">Say Hello</a>
         </section>
     </main>
 
     <footer>
         <div class="footer-content">
-             <div class="footer-social-links">
-                <a href="https://www.linkedin.com/in/k-sri-dattha-shiva-kumar-290829276/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/shivakurada04" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <div class="footer-social-links">
+                <a href="https://www.linkedin.com/in/k-sri-dattha-shiva-kumar-290829276/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/shivakurada04" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 <a href="mailto:shivakurada@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="tel:+919121384525" aria-label="Phone"><i class="fas fa-phone"></i></a>
             </div>
-            <p>&copy; 2025 K Sri Dattha Shiva Kumar. All rights reserved.</p>
+            <p>&copy; 2026 K Sri Dattha Shiva Kumar. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+    <script src="script.js?v=5"></script>
 </body>
-
 </html>

@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | K Sri Dattha Shiva Kumar</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=10">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.20/dist/lenis.css">
 </head>
 <body>
 
@@ -19,7 +20,7 @@
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <button class="hamburger" id="hamburger">
+            <button class="hamburger" id="hamburger" aria-label="Open menu">
                 <span class="hamburger-bar"></span>
                 <span class="hamburger-bar"></span>
                 <span class="hamburger-bar"></span>
@@ -30,108 +31,308 @@
     <main>
         <section id="projects" class="fade-in">
             <h2>My Projects</h2>
+            <p class="section-kicker">Company work at Mr Chams comes first. Each card has the product, the problem, what I built, and a link only where one should be public.</p>
 
-            <div class="project-showcase">
-                <div class="project-image">
-                    <img src="crimetype.png" alt="Crime Prediction Project">
+            <article class="project-card">
+                <div class="project-card-hero">
+                    <div class="project-card-intro">
+                        <p class="company-note">01 · Company project · Mr Chams</p>
+                        <h3>Zaanvar — Consumer Pet Platform</h3>
+                        <p class="project-description">Production web and API platform for pet adoption, sales, lost and found, breeds, clinics, grooming, and events.</p>
+                        <div class="metric-row"><span>5,000+ accounts</span><span>35% faster queries</span><span>120 ms lower API latency</span></div>
+                    </div>
+                    <div class="project-card-media">
+                        <img src="zaanvar.png" alt="Zaanvar pet platform">
+                    </div>
                 </div>
-                <div class="project-details">
-                    <h3>Crime Type & Occurrence Prediction</h3>
-                    <p class="project-description">Designed a predictive analytics system to forecast crime types and their likelihood of occurrence based on historical data and socio-geographic features.</p>
-                    <h4>Key Contributions:</h4>
-                    <ul>
-                        <li>Developed classification models (Random Forest, XGBoost) to predict crime categories.</li>
-                        <li>Engineered features from temporal and spatial data to enhance prediction quality.</li>
-                        <li>Cleaned and preprocessed large-scale crime datasets.</li>
-                        <li>Visualized crime hotspots and trends using heatmaps and bar charts.</li>
-                    </ul>
-                    <div class="tags"><span>Python</span><span>Machine Learning</span><span>Scikit-learn</span><span>Pandas</span><span>Data Visualization</span></div>
+                <div class="project-card-body">
+                    <div>
+                        <h4>Problem</h4>
+                        <p>Adoption, sales, lost and found, and pet services needed one account system, one set of APIs, and reliable payments.</p>
+                    </div>
+                    <div>
+                        <h4>What I built</h4>
+                        <ul>
+                            <li>Built REST APIs and customer pages for adoption, pet sales, lost and found, breeds, and service discovery for 5,000+ accounts.</li>
+                            <li>Developed pet profile, diary, search, and account models across MongoDB and MySQL. Redis caching cut query processing time by 35% and API latency by 120 ms.</li>
+                            <li>Implemented Razorpay checkout, Cognito and JWT sessions, and Socket.io updates for messaging and live pet location.</li>
+                            <li>Stored pet media in Amazon S3 and purged cached files through the Bunny CDN API, with XML sitemaps, canonical URLs, and Schema.org structured data.</li>
+                            <li>Deployed the Node.js services with Docker, PM2, and GitHub Actions, and used Swagger docs for Postman checks. Public and auth routes use Helmet, rate limiting, and bcrypt.</li>
+                            <li>Connected OpenAI content tools and Firebase Cloud Messaging for pet profiles and customer activity.</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+                <div class="tags"><span>Next.js</span><span>React.js</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>MySQL</span><span>Redis</span><span>Socket.io</span><span>Razorpay</span><span>AWS S3</span></div>
+                <div class="project-links">
+                    <a href="https://zaanvar.com" target="_blank" rel="noopener">Live site</a>
+                </div>
+            </article>
 
-            <div class="project-showcase alt-layout">
-                <div class="project-details">
-                    <h3>Privilege Escalation Attack Detection</h3>
-                    <p class="project-description">Designed a machine learning–based system to detect and mitigate insider threats in cloud environments, focusing on privilege escalation attacks.</p>
-                    <h4>Key Contributions:</h4>
-                    <ul>
-                        <li>Implemented ensemble ML models (LightGBM, RF, AdaBoost) to classify threats with up to 97% accuracy.</li>
-                        <li>Used behavioural analytics and anomaly detection to identify escalation attempts.</li>
-                        <li>Trained models on a customized CERT dataset to simulate real-world scenarios.</li>
-                        <li>Proposed mitigation strategies based on access control policies.</li>
-                    </ul>
-                    <div class="tags"><span>Python</span><span>Cloud Security</span><span>LightGBM</span><span>Anomaly Detection</span></div>
+            <article class="project-card">
+                <div class="project-card-hero">
+                    <div class="project-card-intro">
+                        <p class="company-note">02 · Company project · Mr Chams</p>
+                        <h3>Zaanvar Vendor Portal</h3>
+                        <p class="project-description">Multi-tenant portal for clinics, pet shops, and grooming branches to run catalogs, inventory, billing, and bookings.</p>
+                        <div class="metric-row"><span>Wallets and pay-later</span><span>GST billing</span><span>QR inventory intake</span></div>
+                    </div>
+                    <div class="project-card-media">
+                        <img class="is-banner" src="zaanvar-vendor-banner.jpg" alt="Zaanvar vendor business portal">
+                    </div>
                 </div>
-                <div class="project-image">
-                    <img src="privilege.png" alt="Cloud Security Project">
+                <div class="project-card-body">
+                    <div>
+                        <h4>Problem</h4>
+                        <p>Each branch was tracking stock, purchase orders, and bills separately. Wallets, pay-later accounts, supplier ledgers, and GST needed to sit in one portal.</p>
+                    </div>
+                    <div>
+                        <h4>What I built</h4>
+                        <ul>
+                            <li>Built screens for pet sales, products, stock, purchase orders, sales invoices, returns, and supplier records.</li>
+                            <li>Implemented billing for customer wallets, pay-later accounts, supplier ledgers, and GST calculations.</li>
+                            <li>Added revenue charts, PDF invoices, and QR scanning for point-of-sale inventory intake.</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="project-showcase">
-                 <div class="project-image">
-                    <img src="criminal.png" alt="Criminal Face Detection Project">
+                <div class="tags"><span>Next.js</span><span>React.js</span><span>Material UI</span><span>Node.js</span><span>Express.js</span><span>MySQL</span><span>Sequelize</span></div>
+                <div class="project-links">
+                    <a href="https://zaanvar-vendor.vercel.app" target="_blank" rel="noopener">Live site</a>
                 </div>
-                <div class="project-details">
-                    <h3>Criminal Face Detection</h3>
-                    <p class="project-description">Developed a facial recognition tool to assist law enforcement in identifying suspects through real-time image and video processing.</p>
-                    <h4>Key Contributions:</h4>
-                    <ul>
-                        <li>Built face detection and recognition modules using OpenCV and Haar cascades.</li>
-                        <li>Matched facial features against a pre-trained database of known profiles.</li>
-                        <li>Integrated the system with video feeds for live tracking and alerts.</li>
-                    </ul>
-                    <div class="tags"><span>Python</span><span>OpenCV</span><span>Deep Learning</span><span>Computer Vision</span></div>
-                </div>
-            </div>
+            </article>
 
-            <div class="project-showcase alt-layout">
-                <div class="project-details">
-                    <h3>Home Automation Using Java</h3>
-                    <p class="project-description">Engineered a Java-based automation platform to control household devices and optimize energy usage.</p>
-                    <h4>Key Contributions:</h4>
-                    <ul>
-                        <li>Developed device control logic for lights, fans, and sensors using Java.</li>
-                        <li>Achieved 15% energy efficiency by scheduling device operations.</li>
-                        <li>Simulated IoT integration to replicate real-world smart home environments.</li>
-                    </ul>
-                    <div class="tags"><span>Java</span><span>IoT</span><span>Software Design</span></div>
+            <article class="project-card">
+                <div class="project-card-hero">
+                    <div class="project-card-intro">
+                        <p class="company-note">03 · Company project · Mr Chams</p>
+                        <h3>Zaanvar Support Dashboard</h3>
+                        <p class="project-description">Operations console for content, vendor onboarding, QR codes, SEO, users, tickets, and activity logs.</p>
+                        <div class="metric-row"><span>Role-based access</span><span>Vendor onboarding</span><span>Support tickets</span></div>
+                    </div>
+                    <div class="project-card-media">
+                        <div class="project-visual">
+                            <span>Zaanvar</span>
+                            <strong>Support Dashboard</strong>
+                            <p>Content, vendors, tickets, and SEO</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="project-image">
-                    <img src="java.png" alt="Home Automation Project">
+                <div class="project-card-body">
+                    <div>
+                        <h4>Problem</h4>
+                        <p>Content, vendor onboarding, and support tickets were spread across the team, and every role could see too much.</p>
+                    </div>
+                    <div>
+                        <h4>What I built</h4>
+                        <ul>
+                            <li>Built admin screens for pet breeds, vaccinations, pet names, NGOs, media, SEO metadata, and Schema.org.</li>
+                            <li>Developed vendor registration, QR tracking, user administration, and support-ticket workflows on the API.</li>
+                            <li>Enforced role-based access so distributors, operations staff, and support agents see only permitted actions.</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+                <div class="tags"><span>Next.js</span><span>React.js</span><span>Node.js</span><span>Express.js</span><span>MySQL</span><span>Sequelize</span><span>RBAC</span></div>
+            </article>
 
-            <div class="project-showcase">
-                <div class="project-image">
-                    <img src="classmanagment.png" alt="E-Digital Class Management Project">
-                </div>
-                <div class="project-details">
-                    <h3>E-Digital Class Work Management System</h3>
-                    <p class="project-description">A full-stack web application for managing class assignments, submissions, and grades, built with PHP and a SQL backend.</p>
-                    <h4>Key Contributions:</h4>
-                    <ul>
-                        <li>Created dynamic UIs with HTML/CSS and enhanced interactivity with JavaScript.</li>
-                        <li>Developed PHP-based server logic for user authentication and assignment workflows.</li>
-                        <li>Connected a SQL database for storing submissions, grades, and notifications.</li>
-                    </ul>
-                    <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>SQLite</span></div>
-                </div>
-            </div>
+            <h3 class="project-group">Earlier Projects</h3>
 
+            <article class="project-card">
+                <div class="project-card-hero">
+                    <div class="project-card-intro">
+                        <p class="company-note">Python · Django</p>
+                        <h3>Yuva — Payments and Order Management</h3>
+                        <p class="project-description">Python and Django application for payment processing, order placement, and transaction checks.</p>
+                        <div class="metric-row"><span>2,000+ users</span><span>25% fewer discrepancies</span></div>
+                    </div>
+                    <div class="project-card-media">
+                        <img class="is-logo" src="yuva.png" alt="Yuvateam logo">
+                    </div>
+                </div>
+                <div class="project-card-body">
+                    <div>
+                        <h4>Problem</h4>
+                        <p>Orders could go through without a balance check, and duplicate payments were hard to catch.</p>
+                    </div>
+                    <div>
+                        <h4>What I built</h4>
+                        <ul>
+                            <li>Built order APIs with balance checks, account validation, and duplicate-payment protection for 2,000+ users.</li>
+                            <li>Added payment-gateway webhooks with checksum verification, reducing transaction discrepancies by 25%.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tags"><span>Python</span><span>Django</span><span>MySQL</span><span>REST APIs</span><span>Postman</span><span>Git</span></div>
+                <div class="project-links">
+                    <a href="https://yuvateam.org" target="_blank" rel="noopener">Live site</a>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-card-hero">
+                    <div class="project-card-intro">
+                        <p class="company-note">PHP · MySQL</p>
+                        <h3>E-Digital Class Work — Learning Platform</h3>
+                        <p class="project-description">Academic portal for online classes, assignment submission, and grading.</p>
+                        <div class="metric-row"><span>500+ students</span><span>40% less manual coordination</span></div>
+                    </div>
+                    <div class="project-card-media">
+                        <img src="classmanagment.png" alt="E-Digital Class Work learning platform">
+                    </div>
+                </div>
+                <div class="project-card-body">
+                    <div>
+                        <h4>Problem</h4>
+                        <p>Classes, uploads, and grades were coordinated by hand.</p>
+                    </div>
+                    <div>
+                        <h4>What I built</h4>
+                        <ul>
+                            <li>Built role-based access for classes, assignment uploads, and grading across 500+ students.</li>
+                            <li>Automated faculty reports and grade compilation, cutting manual coordination by 40%.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tags"><span>PHP</span><span>MySQL</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Postman</span></div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-card-hero">
+                    <div class="project-card-intro">
+                        <p class="company-note">Machine learning</p>
+                        <h3>Crime Type &amp; Occurrence Prediction</h3>
+                        <p class="project-description">Predictive analytics system to forecast crime types and their likelihood of occurrence from historical and socio-geographic data.</p>
+                        <div class="metric-row"><span>Random Forest</span><span>XGBoost</span><span>Spatial and temporal features</span></div>
+                    </div>
+                    <div class="project-card-media">
+                        <img src="crimetype.png" alt="Crime prediction project">
+                    </div>
+                </div>
+                <div class="project-card-body">
+                    <div>
+                        <h4>Problem</h4>
+                        <p>Historical crime records were hard to use for forecasting which crime types were likely, and where.</p>
+                    </div>
+                    <div>
+                        <h4>What I built</h4>
+                        <ul>
+                            <li>Developed classification models (Random Forest, XGBoost) to predict crime categories.</li>
+                            <li>Engineered features from temporal and spatial data to improve prediction quality.</li>
+                            <li>Cleaned and preprocessed large-scale crime datasets.</li>
+                            <li>Visualized crime hotspots and trends using heatmaps and bar charts.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tags"><span>Python</span><span>Machine Learning</span><span>Scikit-learn</span><span>Pandas</span></div>
+                <div class="project-links">
+                    <a href="https://github.com/shivakurada04/Crime_Type_Occurance_Prediction" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-card-hero">
+                    <div class="project-card-intro">
+                        <p class="company-note">Cloud security</p>
+                        <h3>Privilege Escalation Attack Detection</h3>
+                        <p class="project-description">Machine learning system to detect insider threats in cloud environments, focused on privilege escalation.</p>
+                        <div class="metric-row"><span>Up to 97% accuracy</span><span>CERT dataset</span><span>Ensemble models</span></div>
+                    </div>
+                    <div class="project-card-media">
+                        <img src="privilege.png" alt="Privilege escalation detection project">
+                    </div>
+                </div>
+                <div class="project-card-body">
+                    <div>
+                        <h4>Problem</h4>
+                        <p>Insider privilege-escalation attempts are hard to separate from normal access. The models needed behavioural signals, not only static rules.</p>
+                    </div>
+                    <div>
+                        <h4>What I built</h4>
+                        <ul>
+                            <li>Implemented ensemble models (LightGBM, Random Forest, AdaBoost) to classify threats with up to 97% accuracy.</li>
+                            <li>Used behavioural analytics and anomaly detection to identify escalation attempts.</li>
+                            <li>Trained models on a customized CERT dataset to simulate real-world scenarios.</li>
+                            <li>Proposed mitigation strategies based on access control policies.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tags"><span>Python</span><span>Cloud Security</span><span>LightGBM</span><span>Anomaly Detection</span></div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-card-hero">
+                    <div class="project-card-intro">
+                        <p class="company-note">Computer vision</p>
+                        <h3>Criminal Face Detection</h3>
+                        <p class="project-description">Facial recognition tool to identify suspects through image and video processing.</p>
+                        <div class="metric-row"><span>OpenCV</span><span>Haar cascades</span><span>Live video alerts</span></div>
+                    </div>
+                    <div class="project-card-media">
+                        <img src="criminal.png" alt="Criminal face detection project">
+                    </div>
+                </div>
+                <div class="project-card-body">
+                    <div>
+                        <h4>Problem</h4>
+                        <p>Matching a face in a live video feed against known profiles had to work as images arrived, not only on saved photos.</p>
+                    </div>
+                    <div>
+                        <h4>What I built</h4>
+                        <ul>
+                            <li>Built face detection and recognition modules using OpenCV and Haar cascades.</li>
+                            <li>Matched facial features against a database of known profiles.</li>
+                            <li>Integrated the system with video feeds for live tracking and alerts.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tags"><span>Python</span><span>OpenCV</span><span>Computer Vision</span></div>
+                <div class="project-links">
+                    <a href="https://github.com/shivakurada04/Criminal-FaceDetection-Project" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-card-hero">
+                    <div class="project-card-intro">
+                        <p class="company-note">Java · IoT</p>
+                        <h3>Home Automation Using Java</h3>
+                        <p class="project-description">Java automation platform to control household devices and reduce energy use.</p>
+                        <div class="metric-row"><span>About 15% less energy use</span><span>Scheduled devices</span></div>
+                    </div>
+                    <div class="project-card-media">
+                        <img src="java.png" alt="Home automation project">
+                    </div>
+                </div>
+                <div class="project-card-body">
+                    <div>
+                        <h4>Problem</h4>
+                        <p>Lights, fans, and sensors needed one control path, and they stayed on when nobody was using them.</p>
+                    </div>
+                    <div>
+                        <h4>What I built</h4>
+                        <ul>
+                            <li>Developed device control logic for lights, fans, and sensors using Java.</li>
+                            <li>Improved energy use by about 15% through scheduled device operations.</li>
+                            <li>Simulated IoT integration for a smart-home environment.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tags"><span>Java</span><span>IoT</span><span>Software Design</span></div>
+            </article>
         </section>
     </main>
 
     <footer>
         <div class="footer-content">
-             <div class="footer-social-links">
-                <a href="https://www.linkedin.com/in/k-sri-dattha-shiva-kumar-290829276/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/shivakurada04" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <div class="footer-social-links">
+                <a href="https://www.linkedin.com/in/k-sri-dattha-shiva-kumar-290829276/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/shivakurada04" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 <a href="mailto:shivakurada@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="tel:+919121384525" aria-label="Phone"><i class="fas fa-phone"></i></a>
             </div>
-            <p>&copy; 2025 K Sri Dattha Shiva Kumar. All rights reserved.</p>
+            <p>&copy; 2026 K Sri Dattha Shiva Kumar. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+    <script src="script.js?v=4"></script>
 </body>
 </html>

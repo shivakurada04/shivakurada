@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me | K Sri Dattha Shiva Kumar</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=10">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.20/dist/lenis.css">
 </head>
 <body>
     <header>
@@ -18,7 +19,7 @@
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <button class="hamburger" id="hamburger">
+            <button class="hamburger" id="hamburger" aria-label="Open menu">
                 <span class="hamburger-bar"></span>
                 <span class="hamburger-bar"></span>
                 <span class="hamburger-bar"></span>
@@ -29,8 +30,15 @@
     <main>
         <section id="contact-page" class="fade-in">
             <h2>Contact Me</h2>
+            <div class="contact-details">
+                <a href="mailto:shivakurada@gmail.com"><i class="fas fa-envelope"></i>shivakurada@gmail.com</a>
+                <a href="tel:+919121384525"><i class="fas fa-phone"></i>+91 9121384525</a>
+                <span><i class="fas fa-location-dot"></i>Hyderabad, Telangana, India</span>
+                <a href="https://www.linkedin.com/in/k-sri-dattha-shiva-kumar-290829276/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i>LinkedIn</a>
+                <a href="https://github.com/shivakurada04" target="_blank" rel="noopener"><i class="fab fa-github"></i>GitHub</a>
+            </div>
             <div class="contact-form-container">
-                <p>Have a question or collaboration in mind? Fill out the form below, and I’ll get back to you shortly.</p>
+                <p>I’m in Hyderabad and open to backend, full-stack, and Node.js roles. Email shivakurada@gmail.com, call +91 9121384525, or send a note here.</p>
                 <form action="https://formspree.io/f/YOUR_FORM_ID_HERE" method="POST">
                     <div class="form-group">
                         <label for="name">Full Name</label>
@@ -52,15 +60,17 @@
 
     <footer>
         <div class="footer-content">
-             <div class="footer-social-links">
-                <a href="https://www.linkedin.com/in/k-sri-dattha-shiva-kumar-290829276/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/shivakurada04" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <div class="footer-social-links">
+                <a href="https://www.linkedin.com/in/k-sri-dattha-shiva-kumar-290829276/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/shivakurada04" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 <a href="mailto:shivakurada@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="tel:+919121384525" aria-label="Phone"><i class="fas fa-phone"></i></a>
             </div>
-            <p>&copy; 2025 K Sri Dattha Shiva Kumar. All rights reserved.</p>
+            <p>&copy; 2026 K Sri Dattha Shiva Kumar. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+    <script src="script.js?v=4"></script>
 </body>
 </html>
